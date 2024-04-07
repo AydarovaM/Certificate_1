@@ -10,19 +10,18 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-// string[] items = { "Hello", "World", "125", "72", "yes" };
-string[] items = { "Hello", "-2", "world", ":-)" };
+string[] items = { "Hello", "World", "125", "72", "yes" };
 
 string[] new_items = new string[0];
-int count = 0;
+int size = 0;
 
 for (int i = 0; i < items.Length; i++)
 {
     if (items[i].Length <= 3)
     {
-        count += 1;
-        Array.Resize(ref new_items, count);
-        new_items[count - 1] = items[i];
+        size += 1;
+        Array.Resize(ref new_items, size);
+        new_items[size - 1] = items[i];
     }
 }
 System.Console.Write("[");
